@@ -5,6 +5,7 @@
 (add-to-list 'default-frame-alist '(alpha . (85)))
 
 ; Disable the menu bar, tool bar and scroll bar
+(setq ns-use-native-fullscreen nil)
 (menu-bar-mode -1)
 (toggle-scroll-bar -1)
 (tool-bar-mode -1)
