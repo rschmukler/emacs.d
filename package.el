@@ -8,13 +8,30 @@
 
 (defvar prelude-packages
   '(
+    all-the-icons
+    atom-one-dark-theme
+    aggressive-indent
     alchemist
     company
+    doom-themes
     elixir-mode
     evil
     evil-leader
-    doom-themes
+    exec-path-from-shell
+    flycheck
+    flycheck-credo
+    flycheck-mix
+    git-gutter-fringe
+    helm
+    helm-projectile
+    helm-ag
+    ;; hlinum
     neotree
+    nlinum
+    perspective
+    persp-projectile
+    popwin
+    projectile
   )
   "A list of packages to ensure are installed at launch.")
 
