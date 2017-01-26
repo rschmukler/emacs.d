@@ -17,6 +17,7 @@
 ; Set a nice font
 (when (window-system)
   (set-default-font "Hasklig")
+  ; (mac-auto-operator-composition-mode)
 )
 ;; (let ((alist '((33 . ".\\(?:\\(?:==\\|!!\\)\\|[!=]\\)")
 ;;                (35 . ".\\(?:###\\|##\\|_(\\|[#(?[_{]\\)")
