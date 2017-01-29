@@ -9,6 +9,8 @@
   "v" 'split-window-right
   "]" 'flycheck-next-error
   "[" 'flycheck-previous-error
+  "x" 'helm-M-x
+  "d" 'dired-jump
 )
 
 ;; Neotree
