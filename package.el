@@ -13,14 +13,19 @@
     aggressive-indent
     alchemist
     company
+    dockerfile-mode
     doom-themes
     elixir-mode
+    elm-mode
     evil
     evil-leader
+    evil-surround
     exec-path-from-shell
     flycheck
     flycheck-credo
     flycheck-mix
+    flycheck-rust
+    flycheck-elm
     git-gutter-fringe
     helm
     helm-projectile
@@ -32,6 +37,10 @@
     persp-projectile
     popwin
     projectile
+    racer
+    rust-mode
+    smart-mode-line
+    smart-mode-line-powerline-theme
   )
   "A list of packages to ensure are installed at launch.")
 

@@ -30,6 +30,9 @@
 (setq tab-width 2)
 (setq-default indent-tabs-mode nil)
 
+;; Auto revert-mode. Look ma, no hands...
+(global-auto-revert-mode t)
+
 ;; Turn off line wrapping
 (setq-default truncate-lines 1)
 
@@ -50,7 +53,7 @@
     ("0f0db69b7a75a7466ef2c093e127a3fe3213ce79b87c95d39ed1eccd6fe69f74" "84d2f9eeb3f82d619ca4bfffe5f157282f4779732f48a5ac1484d94d5ff5b279" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" default)))
  '(package-selected-packages
    (quote
-    (helm-projectile git-gutter-fringe git-gutter nlinum helm-ag flycheck-mix atom-one-dark-theme swiper projectile neotree ivy helm-core helm font-lock+ flycheck elixir-mode counsel-projectile counsel company all-the-icons alchemist doom-themes evil))))
+    (flycheck-elm go-mode aggressive-indent graphql-mode toml-mode elm-mode flycheck-rust racer rust-mode tablist magit-popup async smart-mode-line-powerline-theme smart-mode-line use-package exec-path-from-shell dockerfile-mode docker dash evil-surround helm-projectile git-gutter-fringe git-gutter nlinum helm-ag flycheck-mix atom-one-dark-theme swiper projectile neotree ivy helm-core helm font-lock+ flycheck elixir-mode counsel-projectile counsel company all-the-icons alchemist doom-themes evil))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

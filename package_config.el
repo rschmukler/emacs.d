@@ -8,6 +8,9 @@
 (require 'evil-leader)
 (global-evil-leader-mode)
 
+(require 'evil-surround)
+(global-evil-surround-mode 1)
+
 ;; Projectile related configuration
 (require 'projectile)
 (setq projectile-remember-window-configs t)
@@ -72,12 +75,20 @@
 (add-hook 'after-init-hook 'global-company-mode)
 (setq-default company-idle-delay 0)
 
+(require 'elm-mode)
+(add-to-list 'company-backends 'company-elm)
+(add-hook 'elm-mode-hook 'company-mode)
+
 (require 'flycheck)
 (require 'flycheck-mix)
 (require 'flycheck-credo)
+(require 'flycheck-rust)
+(require 'flycheck-elm)
 (eval-after-load 'flycheck (lambda ()
   (flycheck-credo-setup)
   (flycheck-mix-setup)
+  (flycheck-rust-setup)
+  (flycheck-elm-setup)
 
   (flycheck-define-checker elixir-dialyzer
     "Erlang syntax checker based on dialyzer."
@@ -108,6 +119,9 @@
 
 ))
 (add-hook 'elixir-mode-hook 'flycheck-mode)
+(add-hook 'rust-mode-hook #'flycheck-mode)
+(add-hook 'elm-mode-hook #'flycheck-mode)
+(add-hook 'flycheck-mode-hook #'flycheck-rust-setup)
 
 ;; Fix Emacs GUI $PATH bindings
 (require 'exec-path-from-shell)
@@ -142,3 +156,16 @@
 ;;
 (require 'alchemist)
 (require 'elixir-mode)
+
+(require 'dockerfile-mode)
+
+
+;; Rust Specific Plugins
+(require 'rust-mode)
+(add-hook 'rust-mode-hook #'racer-mode)
+(add-hook 'racer-mode-hook #'eldoc-mode)
+(add-hook 'racer-mode-hook #'company-mode)
+
+(define-key rust-mode-map (kbd "TAB") #'company-indent-or-complete-common)
+(setq company-tooltip-align-annotations t)
+(setq racer-rust-src-path "/Users/ryan/.multirust/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src")

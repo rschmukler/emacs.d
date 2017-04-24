@@ -11,6 +11,8 @@
   "[" 'flycheck-previous-error
   "x" 'helm-M-x
   "d" 'dired-jump
+  "k" 'kill-this-buffer
+  "e" 'eval-region
 )
 
 ;; Neotree
@@ -18,6 +20,8 @@
 (evil-define-key 'normal neotree-mode-map (kbd "SPC") 'neotree-enter)
 (evil-define-key 'normal neotree-mode-map (kbd "q") 'neotree-hide)
 (evil-define-key 'normal neotree-mode-map (kbd "RET") 'neotree-enter)
+(evil-define-key 'normal neotree-mode-map (kbd "R") 'neotree-refresh)
+(evil-define-key 'normal neotree-mode-map (kbd "c") 'neotree-rename-node)
 
 ;; Helm
 (define-key helm-map (kbd "C-j")  'helm-next-line)
@@ -54,6 +58,7 @@
 	      "l" 'alchemist-goto-definition-at-point
 	      "t" 'alchemist-project-toggle-file-and-tests
 	      "T" 'alchemist-mix-test-stale
+	      "p" 'alchemist-mix-test-at-point
 	      "m" 'alchemist-goto-list-symbol-definitions
 	    )
 	  ))

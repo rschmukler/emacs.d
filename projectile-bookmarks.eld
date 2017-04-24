@@ -1,1 +1,0 @@
-("~/.emacs.d/" "~/dev/urbint/urbint_umbrella/")
